@@ -79,6 +79,7 @@ html {
  */
 body {
 	margin: 0;
+	padding: 0;
 }
 
 /**
@@ -393,7 +394,69 @@ html {
 /*--------------------------------------------------------------
 # Base
 --------------------------------------------------------------*/
-
+/* Common styles for all screen sizes */
+h1, h2, h3 {
+	font-weight: bold;
+	color: #333;
+	/* Add any other common styles here */
+  }
+  
+  /* Desktop styles (for screens wider than 768px) */
+  @media (min-width: 769px) {
+	h1 {
+	  font-size: 2.5rem;
+	  margin: 1.5rem 0;
+	}
+  
+	h2 {
+	  font-size: 2rem;
+	  margin: 1rem 0;
+	}
+  
+	h3 {
+	  font-size: 1.5rem;
+	  margin: 1rem 0;
+	}
+	/* Add other desktop-specific styles here */
+  }
+  
+  /* Tablet styles (for screens between 576px and 768px) */
+  @media (min-width: 576px) and (max-width: 768px) {
+	h1 {
+	  font-size: 2rem;
+	  margin: 1.5rem 0;
+	}
+  
+	h2 {
+	  font-size: 1.75rem;
+	  margin: 1rem 0;
+	}
+  
+	h3 {
+	  font-size: 1.25rem;
+	  margin: 1rem 0;
+	}
+	/* Add other tablet-specific styles here */
+  }
+  
+  /* Mobile styles (for screens up to 575px) */
+  @media (max-width: 575px) {
+	h1 {
+	  font-size: 1.5rem;
+	  margin: 1rem 0;
+	}
+  
+	h2 {
+	  font-size: 1.25rem;
+	  margin: 1rem 0;
+	}
+  
+	h3 {
+	  font-size: 1rem;
+	  margin: 0.5rem 0;
+	}
+	/* Add other mobile-specific styles here */
+  }
 /* Typography
 --------------------------------------------- */
 body,
@@ -536,18 +599,12 @@ a {
 	color: #4169e1;
 }
 
-a:visited {
-	color: #800080;
-}
+
 
 a:hover,
 a:focus,
 a:active {
 	color: #191970;
-}
-
-a:focus {
-	outline: thin dotted;
 }
 
 a:hover,
@@ -907,8 +964,6 @@ textarea {
 	display: none;
 }
 
-
-
 /* Accessibility
 --------------------------------------------- */
 
@@ -980,3 +1035,45 @@ textarea {
 	margin-right: auto;
 	margin-bottom: 1.5em;
 }
+
+/* Globals */
+* {
+	text-decoration: none;
+}
+ul {
+	list-style-type: none;
+}
+
+/* This is the beginning of the header */
+#masthead {
+	width: 100%;
+	max-width: 80%;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+}
+
+/* this is the beginning of the footer */
+
+/* Reset some default styles for better consistency */
+body, h1, h2, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the footer container */
+ 
+.footer {
+    color: #fff;
+	background-image: url("/wp-content/uploads/2023/10/background_in_space.gif");
+}
+
+.links {
+	display: flex;
+}
+
+.social ul {
+	display: flex;
+	justify-content: center;
+}
+
