@@ -27,7 +27,7 @@
 
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
-		
+		<a href="/"><img src="/wp-content/uploads/2023/10/images.png" alt=""></a>
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">
