@@ -31,7 +31,6 @@
 
 	<div class="row2">
         <div class="contact">
-            <h2>Contact Us</h2>
             <p>Email: contact@example.com</p>
             <p>Phone: (123)456-7890</p>
         </div>
@@ -47,7 +46,6 @@
 
   <div class="item5">
 	 <div class="social">
-            <h2>Follow Us</h2>
             <ul>
                 <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
                 <li><a href="#"><i class="fa-brands fa-square-x-twitter"></i></a></li>
