@@ -398,6 +398,7 @@ html {
 h1, h2, h3 {
 	font-weight: bold;
 	color: #333;
+	font-size: 4rem !important;
 	/* Add any other common styles here */
   }
   
@@ -428,7 +429,7 @@ h1, h2, h3 {
 	}
   
 	h2 {
-	  font-size: 1.75rem;
+	  font-size: 1.75rem !important;
 	  margin: 1rem 0;
 	}
   
@@ -447,7 +448,7 @@ h1, h2, h3 {
 	}
   
 	h2 {
-	  font-size: 1.25rem;
+	  font-size: 1.25rem !important;
 	  margin: 1rem 0;
 	}
   
@@ -956,13 +957,13 @@ textarea {
 /* display none for _s template */
 .entry-title {
    display: none;
-}
-#primary {
+} 
+ /* #primary {
 	display: none;
-}
-#secondary {
+}  */
+  #secondary {
 	display: none;
-}
+}   
 
 /* Accessibility
 --------------------------------------------- */
@@ -1009,21 +1010,17 @@ textarea {
 /* Alignments
 --------------------------------------------- */
 .alignleft {
-
-	/*rtl:ignore*/
+    /*rtl:ignore*/
 	float: left;
-
-	/*rtl:ignore*/
+    /*rtl:ignore*/
 	margin-right: 1.5em;
 	margin-bottom: 1.5em;
 }
 
 .alignright {
-
-	/*rtl:ignore*/
+    /*rtl:ignore*/
 	float: right;
-
-	/*rtl:ignore*/
+    /*rtl:ignore*/
 	margin-left: 1.5em;
 	margin-bottom: 1.5em;
 }
@@ -1043,6 +1040,19 @@ textarea {
 ul {
 	list-style-type: none;
 }
+.centeredFlex {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+.alignLeftText {
+	display: flex;
+	text-align: left;
+	align-items: center;
+	justify-content: left;
+	flex-direction: column;
+}
 
 /* This is the beginning of the header */
 #masthead {
@@ -1053,27 +1063,151 @@ ul {
 	align-items: center;
 }
 
-/* this is the beginning of the footer */
+#site-navigation ul {
+	gap: 5%;
+	display: flex;
+	justify-content: flex-end;
+	font-size: 1.5rem;
+}
+/* this is the end of the header */
 
-/* Reset some default styles for better consistency */
+
+/* this is the Home body css  */
+.mainCover {
+
+}
+.parentDiv {
+	margin: 0;
+	padding: 0;
+	display: flex;
+}
+.headerText {
+
+}
+.paragraphText {
+
+}
+.contactCover {
+   background-repeat: no-repeat;
+   background-position: center;
+   height: auto;
+   position: relative;
+   text-align: center;
+   color: whitesmoke;
+}
+.contactOverlay {
+	position: absolute;
+	bottom: 25%;
+	left: 8%;
+}
+ /* this is the end of the landing page */
+ 
+ /* this is the css for contact page  */
+.gform_title {
+	display: none;
+}
+.formColumn {
+
+}
+.text_column {
+
+}
+
+
+
+/* this is the beginning of the footer */
 body, h1, h2, p, ul, li, a {
     margin: 0;
     padding: 0;
 }
 
-/* Style the footer container */
- 
+#colophon {
+	width: 100%;
+}
+
 .footer {
     color: #fff;
 	background-image: url("/wp-content/uploads/2023/10/background_in_space.gif");
+    width: 100%;
+	text-align: center;
+	padding-bottom: 2%;
 }
 
-.links {
+.row1 {
 	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	max-width: 80%;
+	margin: 0 auto;
+}
+
+.row2 {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content:space-between;
+	max-width: 80%;
+	margin: 0 auto;
+}
+
+.logo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 200px;
+}
+
+.logo img {
+	width: 200px;
+	height: 100px;
+	border-radius: 50%;
+}
+
+.links ul {
+	display: flex;
+	gap: 10%;
+	font-size: 24px;
+}
+
+.item6 {
+	align-items: baseline;
 }
 
 .social ul {
 	display: flex;
 	justify-content: center;
+	gap: 20%;
 }
 
+.social li {
+	font-size: 35px;
+}
+
+.row1 {
+	display: flex;
+	align-items: center;
+}
+
+.item6 {
+	font-size: 20px;
+}
+
+
+@media screen and (max-width: 1024px) {
+	.contactCover {
+		margin-top: -5%;
+	}
+}
+@media screen and (max-width: 950px) {
+	.row1 {
+		flex-direction: column-reverse;
+	}
+	.row2 {
+		flex-direction: column;
+	}
+}
+@media screen and (max-width: 500px) {
+	.links {
+		display: none;
+	}
+} 
